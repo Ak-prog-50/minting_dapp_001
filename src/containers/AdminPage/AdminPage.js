@@ -18,6 +18,7 @@ const AdminPage = () => {
 
   return (
     <Screen>
+      <>
       <div id="container">
         <button
           onClick={(e) => {
@@ -26,9 +27,14 @@ const AdminPage = () => {
           }}
           className="button"
         >
-          CONNECT
+          REVEAL COLLECTION
         </button>
       </div>
+      <div className="image-div">
+      <img src="config/images/logo.png" alt="Nature" class="responsive" width="600" height="400" />
+      </div>
+
+      </>
       {isOwner && <div>AdminPage</div>}
     </Screen>
   );

@@ -1,5 +1,5 @@
 #container {
-  height: 6rem;
+  height: 6.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +28,18 @@
   background-color: var(--admin-button);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+.responsive {
+  width: 70%;
+  height: auto;
+}
+
+.image-div {
+    display: flex;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (min-width: 800px) {
