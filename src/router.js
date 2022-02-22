@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
 import App from "./App";
-import AdminPage from "./containers/AdminPage";
+import AdminPage from "./containers/AdminPage/AdminPage";
 import NotFound from "./containers/NotFound";
 import isOwnerFunction from "./backEndCalls/isOwner";
 import { useSelector } from "react-redux";

@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import isOwnerFunction from "../backEndCalls/isOwner";
+import isOwnerFunction from "../../backEndCalls/isOwner";
 import { useDispatch, useSelector } from "react-redux";
-import NotFound from "./NotFound";
-import { connect } from "../redux/blockchain/blockchainActions";
+import NotFound from "../NotFound";
+import { connect } from "../../redux/blockchain/blockchainActions";
+import { Screen } from "../../styles/globalStyles";
+import "./AdminPage.css";
 
 const AdminPage = () => {
   const dispatch = useDispatch();
@@ -15,17 +17,20 @@ const AdminPage = () => {
   }, [isOwner, setIsOwner]);
 
   return (
-    <>
-      <button
-        onClick={(e) => {
-          e.preventDefault();
-          dispatch(connect());
-        }}
-      >
-        Connect
-      </button>
+    <Screen>
+      <div id="container">
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            dispatch(connect());
+          }}
+          className="button"
+        >
+          CONNECT
+        </button>
+      </div>
       {isOwner && <div>AdminPage</div>}
-    </>
+    </Screen>
   );
 };
 

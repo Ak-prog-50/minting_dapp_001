@@ -1,0 +1,37 @@
+#container {
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: 60%;
+  padding: 20px 25px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: var(--primary-text);
+  background-color: var(--admin-button);
+  border: none;
+  border-radius: 15px;
+  box-shadow: "0 2px 20px #E2C044";
+}
+
+.button:hover {
+  background-color: var(--admin-button);
+}
+
+.button:active {
+  background-color: var(--admin-button);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+@media (min-width: 800px) {
+  .button {
+    width: 40%;
+  }
+}
