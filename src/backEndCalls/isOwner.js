@@ -1,10 +1,10 @@
-const isOwner = (blockchain, CONFIG, setIsOwner) => {
+const isOwner = (blockchain, setIsOwner, CONFIG) => {
   if (blockchain.smartContract) {
-    let gasLimit = CONFIG.GAS_LIMIT;
+    // let gasLimit = CONFIG.GAS_LIMIT;
     blockchain.smartContract.methods
       .owner()
       .call({
-        gasLimit: String(gasLimit),
+        // gasLimit: String(gasLimit),
         from: blockchain.account,
       })
       .then((result) => {
