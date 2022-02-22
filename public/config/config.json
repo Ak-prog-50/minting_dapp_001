@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0xD24d673D493543D5323524345BC0A881bc98f491",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0xD24d673D493543D5323524345BC0A881bc98f491",
+  "NETWORK": {
+    "NAME": "ETHEREUM RINKEBY",
+    "SYMBOL": "Ether",
+    "ID": 4
+  },
+  "NFT_NAME": "Ugly Eyes",
+  "SYMBOL": "UE",
+  "MAX_SUPPLY": 50,
+  "WEI_COST": 30000000000000000,
+  "DISPLAY_COST": 0.03,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/uglyeyes",
+  "SHOW_BACKGROUND": false
+}
