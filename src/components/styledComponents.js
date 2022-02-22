@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledButton = styled.button`
   padding: 10px;
+  margin : 6px;
   border-radius: 50px;
   border: none;
   background-color: var(--secondary);
@@ -20,6 +21,11 @@ export const StyledButton = styled.button`
   }
 `;
 
+/*  box-shadow: 4px 4px 10px -2px #e2c044;
+-webkit-box-shadow: 4px 4px 10px -2px #e2c044;
+-moz-box-shadow: 4px 4px 10px -2px #e2c044;
+*/
+
 export const StyledRoundButton = styled.button`
   padding: 10px;
   border-radius: 100%;
@@ -35,9 +41,9 @@ export const StyledRoundButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 4px 0px -2px rgba(250, 250, 250, 0.3);
-  -webkit-box-shadow: 0px 4px 0px -2px rgba(250, 250, 250, 0.3);
-  -moz-box-shadow: 0px 4px 0px -2px rgba(250, 250, 250, 0.3);
+  box-shadow: 4px 4px 10px -2px #e2c044;
+  -webkit-box-shadow: 4px 4px 10px -2px #e2c044;
+  -moz-box-shadow: 4px 4px 10px -2px #e2c044;
   :active {
     box-shadow: none;
     -webkit-box-shadow: none;

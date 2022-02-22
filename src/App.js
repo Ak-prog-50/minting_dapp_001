@@ -96,14 +96,21 @@ function App() {
         <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={1} jc={"center"} ai={"center"}>
-            <StyledImg alt={"example"} src={"/config/images/example.gif"} />
+          <s.Container flex={1} jc={"center"} ai={"center"} style={{
+            justifyContent: "flex-end",
+            alignItems : "flex-start"
+          }}>
+           {/* <i class="bi bi-discord" style={{
+                 color: "#6A5ACD",
+                 textShadow: "1 1 1 #ccc",
+                 fontSize: "2em",
+           }}></i> */}
           </s.Container>
           <s.SpacerLarge />
 
-          <button onClick={() => revealNFTs(setFeedback, blockchain, CONFIG)}>
+          {/* <button onClick={() => revealNFTs(setFeedback, blockchain, CONFIG)}>
             Reveal
-          </button>
+          </button> */}
 
           <>
             <s.Container
@@ -112,10 +119,15 @@ function App() {
               ai={"center"}
               style={{
                 backgroundColor: "var(--accent)",
-                padding: 24,
-                borderRadius: 24,
-                border: "4px dashed var(--secondary)",
-                boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
+                // padding: 24,
+                // borderRadius: 24,
+                // border: "4px dashed var(--secondary)",
+                // boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
+                margin: 50,
+                marginTop : 10,
+                padding: '1.3rem',
+                borderRadius: 3,
+                boxShadow: '0 2px 20px #E2C044',
               }}
             >
               <s.TextTitle
@@ -279,11 +291,6 @@ function App() {
 
           <s.SpacerLarge />
           <s.Container flex={1} jc={"center"} ai={"center"}>
-            <StyledImg
-              alt={"example"}
-              src={"/config/images/example.gif"}
-              style={{ transform: "scaleX(-1)" }}
-            />
           </s.Container>
         </ResponsiveWrapper>
         <s.SpacerMedium />
