@@ -3,7 +3,7 @@ import "./stickyNotification.css";
 const StickyNotification = () => {
   return (
     <div id="notification-bar">
-      <div class="container">
+      <div className="container">
         <div id="main-text">
           <p>
             <strong>00.30.43 to the Big Reveal !</strong>

@@ -100,7 +100,7 @@ function App() {
             justifyContent: "flex-end",
             alignItems : "flex-start"
           }}>
-           {/* <i class="bi bi-discord" style={{
+           {/* <i className="bi bi-discord" style={{
                  color: "#6A5ACD",
                  textShadow: "1 1 1 #ccc",
                  fontSize: "2em",

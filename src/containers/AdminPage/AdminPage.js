@@ -5,11 +5,13 @@ import NotFound from "../NotFound";
 import { connect } from "../../redux/blockchain/blockchainActions";
 import { Screen } from "../../styles/globalStyles";
 import "./AdminPage.css";
+import Modal from "../../components/Modal/Modal";
 
 const AdminPage = () => {
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const [isOwner, setIsOwner] = useState(false);
+  const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
     isOwnerFunction(blockchain, setIsOwner);
@@ -24,14 +26,16 @@ const AdminPage = () => {
           onClick={(e) => {
             e.preventDefault();
             dispatch(connect());
+            setShowModal(true)
           }}
           className="button"
         >
           REVEAL COLLECTION
         </button>
+        {showModal && <Modal setShowModal={setShowModal} />}
       </div>
       <div className="image-div">
-      <img src="config/images/logo.png" alt="Nature" class="responsive" width="600" height="400" />
+      <img src="config/images/logo.png" alt="Logo" className="responsive" width="600" height="400" />
       </div>
 
       </>
