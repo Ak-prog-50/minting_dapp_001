@@ -25,13 +25,13 @@ const StickyNotification = () => {
     //   phrase = interval.substring(0, interval.length -1);
     // }
 
-    if ((timeLeft[interval] <= 0)) {
-      timerComponents.push(
-        <span className="countdown-text">
-          {"00"}{" "}
-        </span>
-      )
-    } else {
+    // if ((timeLeft[interval] <= 0)) {
+    //   timerComponents.push(
+    //     <span className="countdown-text">
+    //       {"00"}{" "}
+    //     </span>
+    //   )
+    // } else {
       timerComponents.push(
 
         <span className="countdown-text">
@@ -43,7 +43,7 @@ const StickyNotification = () => {
           {interval === "seconds" ? " " : ":"}
         </span>
       );
-    }
+    // }
 
 
   });
@@ -55,7 +55,7 @@ const StickyNotification = () => {
           <p>
             <strong>
               {timerComponents.length ? (
-                timerComponents
+                <>{timerComponents}&nbsp;<span className="countdown-text">to the Big Reveal!</span></>
               ) : (
                 <a
                   href="https://testnets.opensea.io/collection/uglyeyes"
