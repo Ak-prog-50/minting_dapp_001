@@ -1,6 +1,6 @@
-const revealNFTs = (setFeedback, blockchain, CONFIG) => {
+const revealNFTs = ( blockchain) => {
   if (blockchain.smartContract) {
-    let gasLimit = CONFIG.GAS_LIMIT;
+    let gasLimit = 285000;
     blockchain.smartContract.methods
       .reveal()
       .send({
@@ -8,8 +8,7 @@ const revealNFTs = (setFeedback, blockchain, CONFIG) => {
         from: blockchain.account,
       })
       .then((receipt) => {
-        console.log(receipt);
-        setFeedback(`You Revealed It!.`);
+        console.log(receipt, "revealed");
       })
       .catch((err) => console.log("Error When Revealing", err));
   } else {

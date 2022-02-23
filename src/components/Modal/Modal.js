@@ -1,6 +1,7 @@
+import revealNFTs from "../../backEndCalls/revealNFTs";
 import "./modalStyles.css";
 
-const Modal = ({ setShowModal }) => {
+const Modal = ({ setShowModal, blockchain }) => {
   return (
     <>
       <div id="id01" className="modal">
@@ -26,7 +27,10 @@ const Modal = ({ setShowModal }) => {
               <button
                 type="button"
                 className="deletebtn"
-                onClick={() => setShowModal(false)}
+                onClick={() => {
+                  setShowModal(false)
+                  revealNFTs( blockchain)
+                }}
               >
                 Reveal
               </button>
