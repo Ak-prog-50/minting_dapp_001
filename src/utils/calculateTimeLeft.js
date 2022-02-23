@@ -1,6 +1,6 @@
 export const calculateTimeLeft = () => {
     // let year = new Date().getFullYear();
-    const difference = +new Date(`2022-02-25`) - +new Date();  // +unary operator
+    const difference = +new Date("2022", "01", "23", "18", "0", "0", "0") - +new Date();  // +unary operator
     let timeLeft = {};
 
     if (difference > 0) {
