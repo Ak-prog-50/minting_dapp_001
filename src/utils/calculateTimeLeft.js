@@ -10,6 +10,8 @@ export const calculateTimeLeft = () => {
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60),
       };
+      // console.log(timeLeft.seconds, timeLeft.minutes, timeLeft.hours, timeLeft.days , difference)
+      // console.log(typeof(timeLeft.seconds), (timeLeft["seconds"] <= 0))
     }
 
     if (difference < 0) {

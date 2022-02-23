@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
 #notification-bar{
     font-family: 'Open Sans', sans-serif;
     position: sticky;
@@ -46,6 +48,9 @@ margin-left: 8px; */
     text-align: right;
 }
 
+.countdown-text {
+    font-family: 'Oswald', sans-serif;
+}
 
 
 @keyframes gradient {
