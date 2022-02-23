@@ -12,5 +12,10 @@ export const calculateTimeLeft = () => {
       };
     }
 
+    if (difference < 0) {
+      console.error("You have provided a invalid date as reveal date!")
+      return
+    }
+
     return timeLeft;
   };
