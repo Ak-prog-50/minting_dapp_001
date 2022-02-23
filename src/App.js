@@ -12,7 +12,6 @@ import {
   ResponsiveWrapper,
 } from "./components/styledComponents";
 import claimNFTs from "./backEndCalls/claimNFTs";
-import revealNFTs from "./backEndCalls/revealNFTs";
 
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
