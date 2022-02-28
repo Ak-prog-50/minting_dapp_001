@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import isOwnerFunction from "../../backEndCalls/isOwner";
 import { useDispatch, useSelector } from "react-redux";
 import NotFound from "../NotFound";
-import { connect } from "../../redux/blockchain/blockchainActions";
+import { connect } from "../../state/redux/blockchain/blockchainActions";
 import * as s from "../../styles/globalStyles";
 import "./AdminPage.css";
 import Modal from "../../components/Modal/Modal";
