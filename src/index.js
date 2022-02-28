@@ -10,11 +10,11 @@ import "./styles/reset.css";
 
 ReactDOM.render(
   <BrowserRouter>
-    <AuthProvider>
-      <Provider store={store}>
+    <Provider store={store}>
+      <AuthProvider>
         <Routes />
-      </Provider>
-    </AuthProvider>
+      </AuthProvider>
+    </Provider>
   </BrowserRouter>,
   document.getElementById("root")
 );
