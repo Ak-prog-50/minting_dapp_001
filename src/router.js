@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
-import MintPage from "./containers/MintPage";
+import MintPage from "./containers/MintPage/MintPage";
 import AdminPage from "./containers/AdminPage/AdminPage";
 import NotFound from "./containers/NotFound";
 import isOwnerFunction from "./backEndCalls/isOwner";
