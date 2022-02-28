@@ -14,6 +14,7 @@ import {
 import claimNFTs from "../backEndCalls/claimNFTs";
 import { useContext } from "react";
 import { AuthContext } from "../state/context/AuthContext/AuthProvider";
+import { AppContext } from "../state/context/ApplicationContext/AppContextProvider";
 
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
@@ -22,30 +23,18 @@ function App() {
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
-  
-  const {isOwner, setIsOwner} = useContext(AuthContext)
 
-  const [claimingNft, setClaimingNft] = useState(false);
-  const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
-  const [mintAmount, setMintAmount] = useState(1);
-  const [CONFIG, SET_CONFIG] = useState({
-    CONTRACT_ADDRESS: "",
-    SCAN_LINK: "",
-    NETWORK: {
-      NAME: "",
-      SYMBOL: "",
-      ID: 0,
-    },
-    NFT_NAME: "",
-    SYMBOL: "",
-    MAX_SUPPLY: 1,
-    WEI_COST: 0,
-    DISPLAY_COST: 0,
-    GAS_LIMIT: 0,
-    MARKETPLACE: "",
-    MARKETPLACE_LINK: "",
-    SHOW_BACKGROUND: false,
-  });
+  const { isOwner, setIsOwner } = useContext(AuthContext);
+  const {
+    claimingNft,
+    setClaimingNft,
+    feedback,
+    setFeedback,
+    mintAmount,
+    setMintAmount,
+    CONFIG,
+    SET_CONFIG,
+  } = useContext(AppContext);
 
   const decrementMintAmount = () => {
     let newMintAmount = mintAmount - 1;
@@ -99,11 +88,16 @@ function App() {
         <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={1} jc={"center"} ai={"center"} style={{
-            justifyContent: "flex-end",
-            alignItems : "flex-start"
-          }}>
-           {/* <i className="bi bi-discord" style={{
+          <s.Container
+            flex={1}
+            jc={"center"}
+            ai={"center"}
+            style={{
+              justifyContent: "flex-end",
+              alignItems: "flex-start",
+            }}
+          >
+            {/* <i className="bi bi-discord" style={{
                  color: "#6A5ACD",
                  textShadow: "1 1 1 #ccc",
                  fontSize: "2em",
@@ -127,10 +121,10 @@ function App() {
                 // border: "4px dashed var(--secondary)",
                 // boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
                 margin: 50,
-                marginTop : 10,
-                padding: '1.3rem',
+                marginTop: 10,
+                padding: "1.3rem",
                 borderRadius: 3,
-                boxShadow: '0 2px 20px #E2C044',
+                boxShadow: "0 2px 20px #E2C044",
               }}
             >
               <s.TextTitle
@@ -293,8 +287,7 @@ function App() {
           </>
 
           <s.SpacerLarge />
-          <s.Container flex={1} jc={"center"} ai={"center"}>
-          </s.Container>
+          <s.Container flex={1} jc={"center"} ai={"center"}></s.Container>
         </ResponsiveWrapper>
         <s.SpacerMedium />
         <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
