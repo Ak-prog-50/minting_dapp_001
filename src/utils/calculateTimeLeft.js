@@ -14,6 +14,7 @@ export const calculateTimeLeft = () => {
       // console.log(typeof(timeLeft.seconds), (timeLeft["seconds"] <= 0))
     }
 
+    //!Check this if planning to implement this again
     if (difference < 0) {
       console.error("You have provided a invalid date as reveal date!")
       return
