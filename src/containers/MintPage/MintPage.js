@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { connect } from "../state/redux/blockchain/blockchainActions";
-import { fetchData } from "../state/redux/data/dataActions";
-import * as s from "../styles/globalStyles";
+import { connect } from "../../state/redux/blockchain/blockchainActions";
+import { fetchData } from "../../state/redux/data/dataActions";
+import * as s from "../../styles/globalStyles";
 import {
   StyledButton,
   StyledRoundButton,
@@ -10,11 +10,13 @@ import {
   StyledLink,
   StyledLogo,
   ResponsiveWrapper,
-} from "../styles/styledComponents";
-import claimNFTs from "../backEndCalls/claimNFTs";
+} from "../../styles/styledComponents";
+import claimNFTs from "../../backEndCalls/claimNFTs";
 import { useContext } from "react";
-import { AuthContext } from "../state/context/AuthContext/AuthProvider";
-import { AppContext } from "../state/context/ApplicationContext/AppContextProvider";
+import { AuthContext } from "../../state/context/AuthContext/AuthProvider";
+import { AppContext } from "../../state/context/ApplicationContext/AppContextProvider";
+import SideContainer from "../../components/SideContainer/SideContainer";
+import Disclaimer from "../../components/Disclaimer/Disclaimer";
 
 const truncate = (input, len) => {
   return (input.length > len ? `${input.substring(0, len)}...` : input);
@@ -87,28 +89,12 @@ function App() {
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
       >
         <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
-        <s.SpacerSmall />
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container
-            flex={1}
-            jc={"center"}
-            ai={"center"}
-            style={{
-              justifyContent: "flex-end",
-              alignItems: "flex-start",
-            }}
-          >
-            {/* <i className="bi bi-discord" style={{
-                 color: "#6A5ACD",
-                 textShadow: "1 1 1 #ccc",
-                 fontSize: "2em",
-           }}></i> */}
-          </s.Container>
-          <s.SpacerLarge />
 
-          {/* <button onClick={() => revealNFTs(setFeedback, blockchain, CONFIG)}>
-            Reveal
-          </button> */}
+        <s.SpacerSmall />
+
+        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+         <SideContainer />
+          <s.SpacerLarge />
 
           <>
             <s.Container
@@ -287,33 +273,15 @@ function App() {
             </s.Container>
           </>
 
-          <s.SpacerLarge />
-          <s.Container flex={1} jc={"center"} ai={"center"}></s.Container>
+          <s.SpacerLarge />        
+          <SideContainer />
+          
         </ResponsiveWrapper>
+        
         <s.SpacerMedium />
-        <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
-          <s.TextDescription
-            style={{
-              textAlign: "center",
-              color: "var(--primary-text)",
-            }}
-          >
-            Please make sure you are connected to the right network (
-            {CONFIG.NETWORK.NAME} Mainnet) and the correct address. Please note:
-            Once you make the purchase, you cannot undo this action.
-          </s.TextDescription>
-          <s.SpacerSmall />
-          <s.TextDescription
-            style={{
-              textAlign: "center",
-              color: "var(--primary-text)",
-            }}
-          >
-            We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to
-            successfully mint your NFT. We recommend that you don't lower the
-            gas limit.
-          </s.TextDescription>
-        </s.Container>
+
+      <Disclaimer />
+
       </s.Container>
     </s.Screen>
   );
