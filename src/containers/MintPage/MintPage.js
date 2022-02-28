@@ -31,7 +31,6 @@ function App() {
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
 
-  const { isOwner, setIsOwner } = useContext(AuthContext);
   const {
     CONFIG,
     SET_CONFIG,

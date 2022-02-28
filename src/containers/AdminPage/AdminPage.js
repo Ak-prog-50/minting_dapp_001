@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import isOwnerFunction from "../../backEndCalls/isOwner";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import NotFound from "../NotFound";
 import { connect } from "../../state/redux/blockchain/blockchainActions";
@@ -10,13 +9,12 @@ import Modal from "../../components/Modal/Modal";
 const AdminPage = () => {
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
-  const [isOwner, setIsOwner] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    isOwnerFunction(blockchain, setIsOwner);
-    console.log("isOwner", isOwner);
-  }, [isOwner, setIsOwner, blockchain.smartContract]);
+  // useEffect(() => {
+  //   isOwnerFunction(blockchain, setIsOwner);
+  //   console.log("isOwner", isOwner);
+  // }, [isOwner, setIsOwner, blockchain.smartContract]);
 
   return (
     <s.Screen>
@@ -30,7 +28,7 @@ const AdminPage = () => {
                 className="button"
                 onClick={(e) => {
                   e.preventDefault();
-                  dispatch(connect(blockchain, setIsOwner));
+                  dispatch(connect(blockchain));
                 }}
               >
                 CONNECT

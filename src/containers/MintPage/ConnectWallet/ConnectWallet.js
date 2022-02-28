@@ -15,7 +15,7 @@ import { getData } from "../../../utils/applicationFunctions";
 
 const ConnectWallet = () => {
   const dispatch = useDispatch();
-  const {CONFIG, setIsOwner} = useContext(AppContext)
+  const { CONFIG } = useContext(AppContext);
   const blockchain = useSelector((state) => state.blockchain);
 
   return (
@@ -27,7 +27,7 @@ const ConnectWallet = () => {
       <StyledButton
         onClick={(e) => {
           e.preventDefault();
-          dispatch(connect(blockchain, setIsOwner));
+          dispatch(connect(blockchain));
           getData(blockchain, dispatch);
         }}
       >

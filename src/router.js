@@ -3,7 +3,6 @@ import { Route, Redirect, Switch } from "react-router-dom";
 import MintPage from "./containers/MintPage/MintPage";
 import AdminPage from "./containers/AdminPage/AdminPage";
 import NotFound from "./containers/NotFound";
-import isOwnerFunction from "./backEndCalls/isOwner";
 import { useSelector } from "react-redux";
 import StickyNotification from "./components/StickyNotification/StickyNotification";
 
