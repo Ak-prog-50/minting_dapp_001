@@ -4,10 +4,12 @@
 
 This repo is a fully customized version of Hashlips minting dapp. Acts as the entry level template for nft minting dapps. 
 
+Fireabse Url = https://minting-dapp-001.web.app/
+
 
 ## Usage ℹ️
 
-To link up your existing smart contract, go to the `public/config/config.json` file and update the following fields to fit your smart contract, network and marketplace details. The cost field should be in wei.
+To link up a existing smart contract, go to the `public/config/config.json` file and update the following fields to fit your smart contract, network and marketplace details. The cost field should be in wei.
 
 Note: this dapp is designed to work with the intended NFT smart contract, that only takes one parameter in the mint function "mintAmount". But you can change that in the App.js file if you need to use a smart contract that takes 2 params.
 
