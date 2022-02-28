@@ -1,12 +1,12 @@
 import React from "react";
 import { useContext } from "react";
-import { AppContext } from "../../state/context/ApplicationContext/AppContextProvider";
+import { AppContext } from "../../../state/context/ApplicationContext/AppContextProvider";
 import {
   TextTitle,
   TextDescription,
   SpacerSmall,
-} from "../../styles/globalStyles";
-import { StyledLink } from "../../styles/styledComponents";
+} from "../../../styles/globalStyles";
+import { StyledLink } from "../../../styles/styledComponents";
 
 const SaleEndedComp = () => {
   const { CONFIG } = useContext(AppContext);
