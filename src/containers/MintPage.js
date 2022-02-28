@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { connect } from "./redux/blockchain/blockchainActions";
-import { fetchData } from "./redux/data/dataActions";
-import * as s from "./styles/globalStyles";
+import { connect } from "../redux/blockchain/blockchainActions";
+import { fetchData } from "../redux/data/dataActions";
+import * as s from "../styles/globalStyles";
 import {
   StyledButton,
   StyledRoundButton,
@@ -10,8 +10,8 @@ import {
   StyledLink,
   StyledLogo,
   ResponsiveWrapper,
-} from "./components/styledComponents";
-import claimNFTs from "./backEndCalls/claimNFTs";
+} from "../components/styledComponents";
+import claimNFTs from "../backEndCalls/claimNFTs";
 
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
