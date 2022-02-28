@@ -4,14 +4,17 @@ import reportWebVitals from "./reportWebVitals";
 import store from "./state/redux/store";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
+import AuthProvider from "./state/context/AuthContext/AuthProvider";
 import Routes from "./router";
 import "./styles/reset.css";
 
 ReactDOM.render(
   <BrowserRouter>
-    <Provider store={store}>
-      <Routes />
-    </Provider>
+    <AuthProvider>
+      <Provider store={store}>
+        <Routes />
+      </Provider>
+    </AuthProvider>
   </BrowserRouter>,
   document.getElementById("root")
 );
