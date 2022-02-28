@@ -21,12 +21,10 @@ import {
 } from "./MintPageStyles";
 import SaleEndedComp from "./SaleEndedNotice/SaleEndedComp.js";
 import ConnectWallet from "./ConnectWallet/ConnectWallet";
-import { getData } from "../../utils/applicationFunctions";
+import { getData, getConfig } from "../../utils/applicationFunctions";
 import BuyTokens from "./BuyTokens/BuyTokens";
+import { truncate } from "../../utils/truncate";
 
-const truncate = (input, len) => {
-  return input.length > len ? `${input.substring(0, len)}...` : input;
-};
 
 function App() {
   const dispatch = useDispatch();
@@ -39,21 +37,8 @@ function App() {
     SET_CONFIG,
   } = useContext(AppContext);
 
-
-  const getConfig = async () => {
-    const configResponse = await fetch("/config/config.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    });
-    const config = await configResponse.json();
-    SET_CONFIG(config);
-  };
-
-
   useEffect(() => {
-    getConfig();
+    getConfig(SET_CONFIG);
   }, []);
 
   useEffect(() => {
