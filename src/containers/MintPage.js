@@ -10,7 +10,7 @@ import {
   StyledLink,
   StyledLogo,
   ResponsiveWrapper,
-} from "../components/styledComponents";
+} from "../styles/styledComponents";
 import claimNFTs from "../backEndCalls/claimNFTs";
 import { useContext } from "react";
 import { AuthContext } from "../state/context/AuthContext/AuthProvider";
