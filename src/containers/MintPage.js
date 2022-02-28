@@ -12,6 +12,8 @@ import {
   ResponsiveWrapper,
 } from "../components/styledComponents";
 import claimNFTs from "../backEndCalls/claimNFTs";
+import { useContext } from "react";
+import { AuthContext } from "../state/context/AuthContext/AuthProvider";
 
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
@@ -20,10 +22,12 @@ function App() {
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
+  
+  const {isOwner, setIsOwner} = useContext(AuthContext)
+
   const [claimingNft, setClaimingNft] = useState(false);
   const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
   const [mintAmount, setMintAmount] = useState(1);
-  const [isOwner, setIsOwner] = useState(false);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
     SCAN_LINK: "",
