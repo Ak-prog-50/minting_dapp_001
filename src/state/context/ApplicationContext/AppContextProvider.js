@@ -30,7 +30,7 @@ const AppContextProvider = (props) => {
     const [claimingNft, setClaimingNft] = useState(initialState.claimingNft);
     const [feedback, setFeedback] = useState(initialState.feedback);
     const [mintAmount, setMintAmount] = useState(initialState.mintAmount);
-    const [CONFIG, SET_CONFIG] = useState(initialState.mintAmount);
+    const [CONFIG, SET_CONFIG] = useState(initialState.CONFIG);
 
   return (
     <AppContext.Provider

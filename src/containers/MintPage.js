@@ -16,8 +16,9 @@ import { useContext } from "react";
 import { AuthContext } from "../state/context/AuthContext/AuthProvider";
 import { AppContext } from "../state/context/ApplicationContext/AppContextProvider";
 
-const truncate = (input, len) =>
-  input.length > len ? `${input.substring(0, len)}...` : input;
+const truncate = (input, len) => {
+  return (input.length > len ? `${input.substring(0, len)}...` : input);
+}
 
 function App() {
   const dispatch = useDispatch();
