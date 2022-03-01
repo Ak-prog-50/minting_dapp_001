@@ -78,6 +78,7 @@ Also remember to update the short_name and name fields in the `public/manifest.j
 //check for firebase-tools
 npm list -g
 ```
+Make sure to use the **latest PROD-BUILD** branch
 
 ```sh
 npm install firebase / yarn add firebase
