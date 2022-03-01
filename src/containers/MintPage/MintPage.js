@@ -66,6 +66,7 @@ function App() {
               jc={"center"}
               ai={"center"}
               style={mintContainerStyles}
+              responsive
             >
               {/* Count Title */}
               <s.TextTitle style={countTitleStyles}>

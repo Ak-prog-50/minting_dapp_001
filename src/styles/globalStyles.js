@@ -49,6 +49,12 @@ export const Container = styled.div`
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
   background-size: cover;
   background-position: center;
+  ${(props) => props.responsive && `
+    @media (min-width: 767px) {
+      margin : 50px;
+      margin-top : 10px;
+    }
+ `}
 `;
 
 export const TextTitle = styled.p`
