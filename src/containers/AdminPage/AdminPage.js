@@ -22,7 +22,19 @@ const AdminPage = () => {
         <div id="container">
           {blockchain.account === "" || blockchain.smartContract === null ? (
             <>
-              <s.SpacerSmall />
+              <s.SpacerMedium />
+
+              <s.TextTitle>Revealing will incur gas fees.</s.TextTitle>
+              <s.TextSubTitle
+               style={{
+                 color : "var(--danger)"
+               }}
+              >
+                *Make Sure You are logged in as the owner of the smart contract
+                before revealing!
+              </s.TextSubTitle>
+
+              <s.TextSubTitle></s.TextSubTitle>
 
               <button
                 className="button"
@@ -50,14 +62,14 @@ const AdminPage = () => {
             </>
           ) : (
             <>
-
               <s.SpacerMedium />
               <s.SpacerSmall />
               <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                <button className="button"
+                <button
+                  className="button"
                   onClick={(e) => {
                     e.preventDefault();
-                    setShowModal(true)
+                    setShowModal(true);
                   }}
                 >
                   REVEAL COLLECTION
@@ -66,7 +78,9 @@ const AdminPage = () => {
             </>
           )}
 
-          {showModal && <Modal setShowModal={setShowModal} blockchain={blockchain} />}
+          {showModal && (
+            <Modal setShowModal={setShowModal} blockchain={blockchain} />
+          )}
         </div>
 
         <div className="image-div">
@@ -84,4 +98,3 @@ const AdminPage = () => {
 };
 
 export default AdminPage;
-
