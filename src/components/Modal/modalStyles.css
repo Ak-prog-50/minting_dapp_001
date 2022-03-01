@@ -2,7 +2,10 @@
 
 /* Set a style for all buttons */
 button {
+  padding: 14px 20px;
   margin: 8px 0;
+  border: none;
+  cursor: pointer;
   width: 100%;
   opacity: 0.9;
 }
@@ -20,8 +23,8 @@ button:hover {
 
 /* Add a color to the cancel button */
 .cancelbtn {
-  background-color: #ccc;
-  color: black;
+  background-color: var(--accent-text);
+  color: var(--primary);
 }
 
 /* Add a color to the delete button */
