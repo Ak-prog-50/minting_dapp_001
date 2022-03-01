@@ -36,9 +36,15 @@
   text-align: right;
 }
 
-/* .countdown-text {
-  font-family: "Oswald", sans-serif;
-} */
+.countdown-text {
+  font-weight: 500;
+  font-size :2.1rem;
+  transition: transform .5s ease-out .01s;
+}
+
+.countdown-text:hover {
+  transform: scale(1.1);
+}
 
 @keyframes gradient {
   0% {
