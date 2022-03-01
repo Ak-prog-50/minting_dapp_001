@@ -50,7 +50,7 @@ function App() {
         flex={1}
         ai={"center"}
         style={parentContainerStyles}
-        image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
+        image={null}
       >
         <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
 
