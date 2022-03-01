@@ -27,7 +27,7 @@ const ConnectWallet = () => {
       <StyledButton
         onClick={(e) => {
           e.preventDefault();
-          dispatch(connect(blockchain));
+          dispatch(connect(blockchain)); //parameter blockchain can be omitted in connect()
           getData(blockchain, dispatch);
         }}
       >
