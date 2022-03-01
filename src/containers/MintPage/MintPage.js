@@ -10,7 +10,6 @@ import { useContext } from "react";
 import { AuthContext } from "../../state/context/AuthContext/AuthProvider";
 import { AppContext } from "../../state/context/ApplicationContext/AppContextProvider";
 import SideContainer from "../../components/SideContainer/SideContainer";
-import Disclaimer from "../../components/Disclaimer/Disclaimer";
 import {
   contractAddressDescStyles,
   countTitleStyles,
@@ -21,8 +20,9 @@ import {
 } from "./MintPageStyles";
 import SaleEndedComp from "./SaleEndedNotice/SaleEndedComp.js";
 import ConnectWallet from "./ConnectWallet/ConnectWallet";
-import { getData, getConfig } from "../../utils/applicationFunctions";
+import Disclaimer from "./Disclaimer/Disclaimer";
 import BuyTokens from "./BuyTokens/BuyTokens";
+import { getData, getConfig } from "../../utils/applicationFunctions";
 import { truncate } from "../../utils/truncate";
 
 

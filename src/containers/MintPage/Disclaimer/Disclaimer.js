@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { AppContext } from "../../state/context/ApplicationContext/AppContextProvider";
-import { Container, TextDescription, SpacerSmall } from "../../styles/globalStyles";
+import { AppContext } from "../../../state/context/ApplicationContext/AppContextProvider";
+import { Container, TextDescription, SpacerSmall } from "../../../styles/globalStyles";
 
 const Disclaimer = () => {
 
