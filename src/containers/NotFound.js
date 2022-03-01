@@ -1,6 +1,15 @@
-import React from "react";
+import React, {useEffect} from "react";
+import { useContext } from "react";
+import { AppContext } from "../state/context/ApplicationContext/AppContextProvider";
+import { getConfig } from "../utils/applicationFunctions";
 
 const NotFound = () => {
+  const {SET_CONFIG} = useContext(AppContext)
+
+  useEffect(() => {
+    getConfig(SET_CONFIG);
+  }, []);
+
   return (
     <div
       style={{

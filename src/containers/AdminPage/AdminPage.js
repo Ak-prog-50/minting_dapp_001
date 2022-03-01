@@ -1,16 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import NotFound from "../NotFound";
 import { connect } from "../../state/redux/blockchain/blockchainActions";
 import * as s from "../../styles/globalStyles";
 import "./AdminPage.css";
 import Modal from "../../components/Modal/Modal";
+import { useContext } from "react";
+import { AppContext } from "../../state/context/ApplicationContext/AppContextProvider";
+import { getConfig } from "../../utils/applicationFunctions";
 
 const AdminPage = () => {
+  const {SET_CONFIG} = useContext(AppContext)
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const [showModal, setShowModal] = useState(false);
 
+  useEffect(() => {
+    getConfig(SET_CONFIG);
+  }, []);
   // useEffect(() => {
   //   isOwnerFunction(blockchain, setIsOwner);
   //   console.log("isOwner", isOwner);
