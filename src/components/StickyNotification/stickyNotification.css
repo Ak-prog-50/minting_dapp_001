@@ -39,6 +39,7 @@
   font-weight: 500;
   font-size: 2.1rem;
   transition: transform 0.5s ease-out 0.01s;
+  letter-spacing: 0.6px;
 }
 
 .countdown-text:hover {
