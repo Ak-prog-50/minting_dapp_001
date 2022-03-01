@@ -20,16 +20,19 @@ const AdminPage = () => {
     <s.Screen>
       <>
         <div id="container">
-          
-          <s.TextTitle>Revealing will incur gas fees.</s.TextTitle>
-          <s.TextSubTitle
-            style={{
-              color: "var(--danger)",
-            }}
-          >
-            *Make Sure You are logged in as the owner of the smart contract
-            before revealing!
-          </s.TextSubTitle>
+
+          <div id="text-container">
+            <s.TextTitle style={{textAlign:"center"}}>Revealing will incur gas fees.</s.TextTitle>
+            <s.TextSubTitle
+              style={{
+                color: "var(--danger)",
+                textAlign:"center"
+              }}
+            >
+              *Make Sure You are logged in as the owner of the smart contract
+              before revealing!
+            </s.TextSubTitle>
+          </div>
 
           {blockchain.account === "" || blockchain.smartContract === null ? (
             <>

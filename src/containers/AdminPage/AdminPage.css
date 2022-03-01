@@ -7,6 +7,10 @@
   margin: 4rem;
 }
 
+#text-container {
+  margin-top : 3rem
+}
+
 .button-container {
   box-shadow: 0 2px 20px #E2C044;
   margin: 1.6rem;
@@ -53,3 +57,10 @@
     width: 40%;
   }
 } */
+
+@media only screen and (max-width: 500px) {
+  #container {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+  }
+}
