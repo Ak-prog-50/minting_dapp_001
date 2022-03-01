@@ -7,8 +7,13 @@
   margin: 4rem;
 }
 
+.button-container {
+  box-shadow: 0 2px 20px #E2C044;
+  margin: 1.6rem;
+}
+
 .button {
-  width: 60%;
+  /* width: 60%; */
   padding: 20px 25px;
   font-size: 20px;
   font-weight: 600;
@@ -16,10 +21,9 @@
   cursor: pointer;
   outline: none;
   color: var(--primary-text);
-  background-color: var(--admin-button);
+  background-color: var(--primary);
   border: none;
   border-radius: 15px;
-  box-shadow: "0 2px 20px #E2C044";
 }
 
 .button:hover {
@@ -38,14 +42,14 @@
 }
 
 .image-div {
-    display: flex;
-    margin-top: 3rem;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (min-width: 800px) {
+/* @media (min-width: 800px) {
   .button {
     width: 40%;
   }
-}
+} */

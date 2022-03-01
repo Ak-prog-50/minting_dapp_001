@@ -20,31 +20,32 @@ const AdminPage = () => {
     <s.Screen>
       <>
         <div id="container">
+          
+          <s.TextTitle>Revealing will incur gas fees.</s.TextTitle>
+          <s.TextSubTitle
+            style={{
+              color: "var(--danger)",
+            }}
+          >
+            *Make Sure You are logged in as the owner of the smart contract
+            before revealing!
+          </s.TextSubTitle>
+
           {blockchain.account === "" || blockchain.smartContract === null ? (
             <>
               <s.SpacerMedium />
 
-              <s.TextTitle>Revealing will incur gas fees.</s.TextTitle>
-              <s.TextSubTitle
-               style={{
-                 color : "var(--danger)"
-               }}
-              >
-                *Make Sure You are logged in as the owner of the smart contract
-                before revealing!
-              </s.TextSubTitle>
-
-              <s.TextSubTitle></s.TextSubTitle>
-
-              <button
-                className="button"
-                onClick={(e) => {
-                  e.preventDefault();
-                  dispatch(connect(blockchain));
-                }}
-              >
-                CONNECT
-              </button>
+              <div className="button-container">
+                <button
+                  className="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    dispatch(connect(blockchain));
+                  }}
+                >
+                  CONNECT
+                </button>
+              </div>
 
               {blockchain.errorMsg !== "" ? (
                 <>
@@ -65,15 +66,17 @@ const AdminPage = () => {
               <s.SpacerMedium />
               <s.SpacerSmall />
               <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                <button
-                  className="button"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setShowModal(true);
-                  }}
-                >
-                  REVEAL COLLECTION
-                </button>
+                <div className="button-container">
+                  <button
+                    className="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowModal(true);
+                    }}
+                  >
+                    REVEAL COLLECTION
+                  </button>
+                </div>
               </s.Container>
             </>
           )}
