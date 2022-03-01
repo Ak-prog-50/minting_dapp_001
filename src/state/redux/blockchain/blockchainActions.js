@@ -65,6 +65,7 @@ export const connect = () => {
             abi,
             CONFIG.CONTRACT_ADDRESS
           );
+          //@dev dispatch success if metamaskIsInstalled && accounts[0] && networkId == config.network.id
           dispatch(
             connectSuccess({
               account: accounts[0],
