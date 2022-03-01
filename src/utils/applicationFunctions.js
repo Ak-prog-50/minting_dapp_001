@@ -2,7 +2,7 @@ import { fetchData } from "../state/redux/data/dataActions";
 
 export const getData = (blockchain, dispatch) => {
   if (blockchain.account !== "" && blockchain.smartContract !== null) {
-    dispatch(fetchData(blockchain.account));
+    dispatch(fetchData(blockchain.account)); //@dev blockchain.account parameter can be omitted (!should test further)
   }
 };
 
