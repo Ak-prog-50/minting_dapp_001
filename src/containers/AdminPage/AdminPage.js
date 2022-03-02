@@ -10,7 +10,7 @@ import { AppContext } from "../../state/context/ApplicationContext/AppContextPro
 import { getConfig } from "../../utils/applicationFunctions";
 
 const AdminPage = () => {
-  const {SET_CONFIG} = useContext(AppContext)
+  const { CONFIG, SET_CONFIG, setIsRevealed, isRevealed } = useContext(AppContext);
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const [showModal, setShowModal] = useState(false);
@@ -27,13 +27,14 @@ const AdminPage = () => {
     <s.Screen>
       <>
         <div id="container">
-
           <div id="text-container">
-            <s.TextTitle style={{textAlign:"center"}}>Revealing will incur gas fees.</s.TextTitle>
+            <s.TextTitle style={{ textAlign: "center" }}>
+              Revealing will incur gas fees.
+            </s.TextTitle>
             <s.TextSubTitle
               style={{
                 color: "var(--danger)",
-                textAlign:"center"
+                textAlign: "center",
               }}
             >
               *Make Sure You are logged in as the owner of the smart contract
@@ -92,7 +93,13 @@ const AdminPage = () => {
           )}
 
           {showModal && (
-            <Modal setShowModal={setShowModal} blockchain={blockchain} />
+            <Modal
+              setShowModal={setShowModal}
+              blockchain={blockchain}
+              isRevealed={isRevealed}
+              setIsRevealed={setIsRevealed}
+              CONFIG={CONFIG}
+            />
           )}
         </div>
 
