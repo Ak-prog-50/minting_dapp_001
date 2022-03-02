@@ -8,7 +8,10 @@ const checkRevealed = (blockchain, setisRevealed, CONFIG) => {
           from: blockchain.account,
         })
         .then((result) => {
-          setisRevealed(result)
+          if (typeof(result) === 'boolean') {
+            setisRevealed(result)
+          }
+          else return
         })
         .catch((err) =>
           console.error("Error Occured When Checking Revealed.", err)
