@@ -12,7 +12,7 @@
 }
 
 .button-container {
-  box-shadow: 0 2px 20px #E2C044;
+  box-shadow: 0 2px 20px var(--secondary);
   margin: 1.6rem;
 }
 
