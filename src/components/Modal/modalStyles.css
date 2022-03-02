@@ -14,6 +14,15 @@ button:hover {
   opacity:1;
 }
 
+.isRevealedContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 1rem;
+  margin-left: 6rem;
+  margin-right: 6rem; */
+}
+
 /* Float cancel and delete buttons and add an equal width */
 .cancelbtn, .deletebtn {
   float: left;
@@ -70,10 +79,16 @@ hr {
 }
 
 /* The Modal Close Button (x) */
-.close {
+/* .close {
   position: absolute;
   right: 35px;
   top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+} */
+
+.close {
   font-size: 40px;
   font-weight: bold;
   color: #f1f1f1;
