@@ -1,5 +1,4 @@
 import revealNFTs from "../../backEndCalls/revealNFTs";
-import checkRevealed from "../../backEndCalls/checkRevealed";
 import { SpacerSmall } from "../../styles/globalStyles";
 import "./modalStyles.css";
 
@@ -7,8 +6,6 @@ const Modal = ({
   setShowModal,
   blockchain,
   isRevealed,
-  setIsRevealed,
-  CONFIG,
 }) => {
   return (
     <>

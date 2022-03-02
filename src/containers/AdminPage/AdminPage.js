@@ -8,9 +8,11 @@ import Modal from "../../components/Modal/Modal";
 import { useContext } from "react";
 import { AppContext } from "../../state/context/ApplicationContext/AppContextProvider";
 import { getConfig } from "../../utils/applicationFunctions";
+import checkRevealed from "../../backEndCalls/checkRevealed";
 
 const AdminPage = () => {
-  const { CONFIG, SET_CONFIG, setIsRevealed, isRevealed } = useContext(AppContext);
+  const { CONFIG, SET_CONFIG, setIsRevealed, isRevealed } =
+    useContext(AppContext);
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const [showModal, setShowModal] = useState(false);
@@ -18,6 +20,12 @@ const AdminPage = () => {
   useEffect(() => {
     getConfig(SET_CONFIG);
   }, []);
+
+  useEffect(() => {
+    if (blockchain.smartContract) {
+      checkRevealed(blockchain, setIsRevealed, CONFIG);
+    }
+  }, [isRevealed, blockchain, CONFIG]);
   // useEffect(() => {
   //   isOwnerFunction(blockchain, setIsOwner);
   //   console.log("isOwner", isOwner);
@@ -97,8 +105,6 @@ const AdminPage = () => {
               setShowModal={setShowModal}
               blockchain={blockchain}
               isRevealed={isRevealed}
-              setIsRevealed={setIsRevealed}
-              CONFIG={CONFIG}
             />
           )}
         </div>
