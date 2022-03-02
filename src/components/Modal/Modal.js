@@ -16,7 +16,7 @@ const Modal = ({
               <h1>Are you sure you want to reveal your NFT collection?</h1>
             ) : (
               <div className="isRevealedContainer">
-                <h1>You have already revealed</h1>
+                <h1>You have already revealed.</h1>
                 <SpacerSmall />
                 <span
                   onClick={() => setShowModal(false)}
