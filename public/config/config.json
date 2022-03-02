@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0xc78Ff91538690f6755Bd3B55Cb13D876CD3EbcCb",
-  "SCAN_LINK": "https://mumbai.polygonscan.com/address/0xc78ff91538690f6755bd3b55cb13d876cd3ebccb",
+  "CONTRACT_ADDRESS": "your contract address",
+  "SCAN_LINK": "contract scan link EX: https://mumbai.polygonscan.com/address/0xc78ff91538690f6755bd3b55cb13d876cd3ebccb",
   "NETWORK": {
-    "NAME": "POLYGON MUMBAI",
-    "SYMBOL": "Matic",
-    "ID": 80001
+    "NAME": "POLYGON / ETHEREUM",
+    "SYMBOL": "Matic/ Eth",
+    "ID": "chain_Id"
   },
-  "NFT_NAME": "Aweful Weird Clones",
-  "SYMBOL": "AWC",
-  "MAX_SUPPLY": 150,
-  "WEI_COST": 2000000000000000,
-  "DISPLAY_COST": 0.002,
-  "GAS_LIMIT": 285000,
-  "MARKETPLACE": "Opeansea.io",
-  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/awefulweirdclones",
-  "SHOW_BACKGROUND": false
+  "NFT_NAME": "collection name",
+  "SYMBOL": "collection symbol",
+  "MAX_SUPPLY": "max_supply",
+  "WEI_COST": "cost converted to wei",
+  "DISPLAY_COST": "display cost in eth or matic",
+  "GAS_LIMIT": "gas limit Ex: 285000",
+  "MARKETPLACE": "Opeansea.io / Something else",
+  "MARKETPLACE_LINK": "Ex : https://testnets.opensea.io/collection/awefulweirdclones",
+  "SHOW_BACKGROUND": "false is good"
 }
