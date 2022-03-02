@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0xD24d673D493543D5323524345BC0A881bc98f491",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0xD24d673D493543D5323524345BC0A881bc98f491",
+  "CONTRACT_ADDRESS": "0xc78Ff91538690f6755Bd3B55Cb13D876CD3EbcCb",
+  "SCAN_LINK": "https://mumbai.polygonscan.com/address/0xc78ff91538690f6755bd3b55cb13d876cd3ebccb",
   "NETWORK": {
-    "NAME": "ETHEREUM RINKEBY",
-    "SYMBOL": "Ether",
-    "ID": 4
+    "NAME": "POLYGON MUMBAI",
+    "SYMBOL": "Matic",
+    "ID": 80001
   },
-  "NFT_NAME": "Ugly Eyes",
-  "SYMBOL": "UE",
-  "MAX_SUPPLY": 50,
-  "WEI_COST": 30000000000000000,
-  "DISPLAY_COST": 0.03,
+  "NFT_NAME": "Aweful Weird Clones",
+  "SYMBOL": "AWC",
+  "MAX_SUPPLY": 150,
+  "WEI_COST": 2000000000000000,
+  "DISPLAY_COST": 0.002,
   "GAS_LIMIT": 285000,
-  "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/uglyeyes",
+  "MARKETPLACE": "Opeansea.io",
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/awefulweirdclones",
   "SHOW_BACKGROUND": false
 }
