@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "your contract address",
-  "SCAN_LINK": "contract scan link EX: https://mumbai.polygonscan.com/address/0xc78ff91538690f6755bd3b55cb13d876cd3ebccb",
+  "CONTRACT_ADDRESS": "0xD24d673D493543D5323524345BC0A881bc98f491",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0xD24d673D493543D5323524345BC0A881bc98f491",
   "NETWORK": {
-    "NAME": "POLYGON / ETHEREUM",
-    "SYMBOL": "Matic/ Eth",
-    "ID": "chain_Id"
+    "NAME": "ETHEREUM RINKEBY",
+    "SYMBOL": "Ether",
+    "ID": 4
   },
-  "NFT_NAME": "collection name",
-  "SYMBOL": "collection symbol",
-  "MAX_SUPPLY": "max_supply",
-  "WEI_COST": "cost converted to wei",
-  "DISPLAY_COST": "display cost in eth or matic",
-  "GAS_LIMIT": "gas limit Ex: 285000",
-  "MARKETPLACE": "Opeansea.io / Something else",
-  "MARKETPLACE_LINK": "Ex : https://testnets.opensea.io/collection/awefulweirdclones",
-  "SHOW_BACKGROUND": "false is good"
+  "NFT_NAME": "Ugly Eyes",
+  "SYMBOL": "UE",
+  "MAX_SUPPLY": 50,
+  "WEI_COST": 30000000000000000,
+  "DISPLAY_COST": 0.03,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea.io",
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/uglyeyes",
+  "SHOW_BACKGROUND": false
 }
